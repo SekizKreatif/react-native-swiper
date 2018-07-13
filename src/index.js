@@ -465,6 +465,8 @@ export default class extends Component {
     this.setState({
       autoplayEnd: false
     })
+    
+    this.scrollView && this.scrollView.scrollTo({ x, y, animated })
 
     // trigger onScrollEnd manually in android
     if (!animated || Platform.OS !== 'ios') {
